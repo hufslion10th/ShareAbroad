@@ -1,3 +1,10 @@
-{% extends layout.html %}
+{% extends 'layout.html' %}
 
+{% block content %}
 <h1>Q detail</h1>
+<div>{{ question.title }}</div>
+<div>{{ question.writer }}</div>
+<div>{{ question.content }}</div>
+<div>{{ question.category }}</div>
+<div>{{ question.created_at }}</div>
+{% endblock %}
