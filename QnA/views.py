@@ -32,8 +32,26 @@ def create_question(request):
     return render(request, template_name='QnA/questionCreate.html', context=ctx)
 
 
-def create_answer(request):
-    return render(request, template_name='QnA/answerCreate.html')
+def create_answer(request, pk):
+    question = QuestionPost.objects.get(id=pk)
+
+    if request.method == 'POST':
+        answer_form = CreateAnswerForm(request.POST, request.FILES)
+
+        if answer_form.is_valid():
+            answer = answer_form.save(commit=False)
+            answer.question = question
+            answer.writer = User.objects.get(id=1)
+            answer.save()
+            return redirect('QnA:QnA-detail', question.pk)
+
+    else:
+        answer_form = CreateAnswerForm()
+    ctx = {
+        'question': question,
+        'answer_form': answer_form,
+    }
+    return render(request, template_name='QnA/answerCreate.html', context=ctx)
 
 
 # 질문글 하나만 보는 view

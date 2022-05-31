@@ -1,1 +1,11 @@
-<h1>Acreate</h1>
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>{{ question }}에 대한 답변을 달아보자</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ answer_form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

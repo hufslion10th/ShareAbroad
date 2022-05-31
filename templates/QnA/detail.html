@@ -7,4 +7,6 @@
 <div>{{ question.content }}</div>
 <div>{{ question.category }}</div>
 <div>{{ question.created_at }}</div>
+
+<a href="{% url 'QnA:create-A' question.id %}">답변 달기</a>
 {% endblock %}
