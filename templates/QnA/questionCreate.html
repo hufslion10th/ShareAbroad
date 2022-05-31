@@ -1,1 +1,11 @@
-<h1>Qcreate</h1>
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Q create</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ question_form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
