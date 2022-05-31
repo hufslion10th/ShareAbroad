@@ -6,4 +6,5 @@ from django.conf.urls.static import static
 app_name = 'users'
 
 urlpatterns = [
+    path('', views.review),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
