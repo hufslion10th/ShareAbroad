@@ -17,3 +17,32 @@ class ReviewPost(models.Model):
     class Meta: # admin에서 보기 편하게 하려고
         verbose_name = "리뷰"
         verbose_name_plural = "리뷰"
+
+    
+class ReviewPhoto(models.Model):
+    review = models.ForeignKey(ReviewPost, on_delete=models.CASCADE, verbose_name="리뷰글")
+    photo = models.ImageField(upload_to='question/', null=True, blank=True, verbose_name="리뷰 사진")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="생성일")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="변경일")
+
+    def __str__(self):
+        return f"{self.review.title}의 사진"
+
+    class Meta:
+        verbose_name = "리뷰 사진"
+        verbose_name_plural = "리뷰 사진"
+
+
+class ReviewComment(models.Model):
+    review = models.ForeignKey(ReviewPost, on_delete=models.CASCADE, verbose_name="리뷰 댓글")
+    writer = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="리뷰 댓글 작성자")
+    content = models.TextField(verbose_name="질문 댓글 내용")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="생성일")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="변경일")
+
+    def __str__(self):
+        return f"{self.writer}의 {self.review.title}에 대한 댓글"
+
+    class Meta:
+        verbose_name = "리뷰 댓글"
+        verbose_name_plural = "리뷰 댓글"
