@@ -57,9 +57,11 @@ def create_answer(request, pk):
 # 질문글 하나만 보는 view
 def question_detail(request, pk):
     question = QuestionPost.objects.get(id=pk)
+    answers = AnswerPost.objects.filter(question=question)
 
     ctx = {
         "question": question,
+        "answers": answers,
     }
     return render(request, template_name='QnA/detail.html', context=ctx)
 

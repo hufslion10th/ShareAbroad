@@ -2,11 +2,19 @@
 
 {% block content %}
 <h1>Q detail</h1>
-<div>{{ question.title }}</div>
-<div>{{ question.writer }}</div>
-<div>{{ question.content }}</div>
-<div>{{ question.category }}</div>
-<div>{{ question.created_at }}</div>
+<div>제목: {{ question.title }}</div>
+<div>카테고리 {{ question.category }}</div>
+<div>작성자: {{ question.writer }}</div>
+<div>내용: {{ question.content }}</div>
+<div>언제?{{ question.created_at }}</div>
 
 <a href="{% url 'QnA:create-A' question.id %}">답변 달기</a>
+
+<div>-------------</div>
+<h1>답변들</h1>
+{% for answer in answers %}
+<div>작성자: {{ answer.writer }}</div>
+<div>내용: {{ answer.content }}</div>
+<div>언제? {{ answer.created_at }}</div>
+{% endfor %}
 {% endblock %}
