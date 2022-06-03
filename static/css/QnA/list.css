@@ -57,10 +57,10 @@
   padding: 0.5rem;
   cursor: pointer;
 }
-.QnA-section > .q-wrap > .sorting > .sorting-picked {
+.QnA-section > .q-wrap > .sorting > .extra-sorting {
   display: flex;
 }
-.QnA-section > .q-wrap > .sorting > .sorting-picked > div {
+.QnA-section > .q-wrap > .sorting > .extra-sorting > div {
   margin-left: 0.5rem;
   color: gray;
   font-size: 0.8rem;
