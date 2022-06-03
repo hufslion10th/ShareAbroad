@@ -10,34 +10,56 @@
 <section class="QnA-section">
     <div class="title-wrap">
         <div class="title">질문 게시판</div>
-        <div class="q-sorting">
-            <span>최신 순</span>
-            <span>조회 순</span>
-            <span>공감 많은 순</span>
-            <span>댓글 많은 순</span>
+        <div class="btn-wrap">
+            <button>내 질문 관리</button>
+            <button>질문하기</button>
         </div>
     </div>
-    <div class="q-wrap">
-    {% for q in questions %}
-        <div class="each-q">
-            <a href="{% url 'QnA:QnA-detail' q.id %}">
-                <div class="q-title-wrap">
-                    <div class="q-title">{{ q.title }}</div>
-                    {% if q.picked_answer %}
-                    <div class="q-picked-true">답변 채택 완료</div>
-                    {% else %}
-                    <div class="q-picked-false">답변 채택 전</div>
-                    {% endif %}
-                </div>
-                <div class="q-content-wrap">
-                    <div>{{ q.content }}</div>
-                </div>
-                <div class="q-info-wrap">
-                    <div>개수 | 나라 | {{ q.created_at }}</div>
-                </div>
-            </a>
+
+    <div class="q-hot">
+        <div class="sub-title">🛫 많이 본 QnA</div>
+        <div class="hot-wrap">
+            <div class="arrow"><</div>
+            <div>
+                <div></div>
+            </div>
+            <div class="arrow"> ></div>
         </div>
-    {% endfor %}
+    </div>
+
+    <div class="q-wrap">
+        <div class="sub-title">🛸 새로 올라온 질문</div>
+        <div class="sorting">
+            <select>
+                <option>국가 선택</option>
+            </select>
+            <div class="sorting-picked">
+                <div>답변을 기다리는 질문</div>
+                <div>해결된 질문</div>
+            </div>
+        </div>
+        <div class="q-list">
+            {% for q in questions %}
+            <div class="each-q">
+                <a href="{% url 'QnA:QnA-detail' q.id %}">
+                    <div class="q-title-wrap">
+                        <div class="q-title">{{ q.title }}</div>
+                        {% if q.picked_answer %}
+                        <div class="q-picked-true">답변 채택 완료</div>
+                        {% else %}
+                        <div class="q-picked-false">답변 채택 전</div>
+                        {% endif %}
+                    </div>
+                    <div class="q-content-wrap">
+                        <div>{{ q.content }}</div>
+                    </div>
+                    <div class="q-info-wrap">
+                        <div>개수 | 나라 | {{ q.created_at }}</div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
 {% endblock %}
