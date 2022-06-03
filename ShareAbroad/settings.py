@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',
 
     'ShareAbroad',
     'users',
@@ -76,7 +77,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ShareAbroad.wsgi.application'
-
+SASS_OUTPUT_STYLE = 'compact'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases

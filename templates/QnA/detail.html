@@ -1,12 +1,65 @@
 {% extends 'layout.html' %}
+{% load static %}
 
 {% block content %}
 <h1>Q detail</h1>
-<div>{{ question.title }}</div>
-<div>{{ question.writer }}</div>
-<div>{{ question.content }}</div>
-<div>{{ question.category }}</div>
-<div>{{ question.created_at }}</div>
+<div>제목: {{ question.title }}</div>
+<div>카테고리 {{ question.category }}</div>
+<div>작성자: {{ question.writer }}</div>
+<div>내용: {{ question.content }}</div>
+<div>언제?{{ question.created_at }}</div>
+<div>-------------</div>
+
+<section>
+    <h1>댓글</h1>
+    <div>
+        <input type="text" class="commentQ">
+        <button onclick="submitComment();">댓글 달기</button>
+    </div>
+    <div class="q-comment-box">
+        {% if comments %}
+        {% for comment in comments %}
+            {% include 'includes/comment_form.html' %}
+        {% endfor %}
+        {% endif %}
+    </div>
+</section>
+
+<div>-------------</div>
 
 <a href="{% url 'QnA:create-A' question.id %}">답변 달기</a>
+
+<div>-------------</div>
+<h1>답변들</h1>
+{% for answer in answers %}
+<div>작성자: {{ answer.writer }}</div>
+<div>내용: {{ answer.content }}</div>
+<div>언제? {{ answer.created_at }}</div>
+{% endfor %}
+
+<script>
+    const submitComment = () => {
+        let target = event.target;
+        let content = document.querySelector('.commentQ').value;
+
+        let data = {
+            'content': content,
+        }
+
+         $.ajax({
+            type: 'GET',
+            dataType: 'JSON',
+            url: "{% url 'QnA:create_comment_of_Q' question.id %}",
+            data: data,
+            success: function (comment_data) {
+                let box = document.getElementsByClassName('q-comment-box')[0];
+                box.innerHTML += comment_data['content']
+                let input = document.querySelector('input.commentQ');
+                input.value = '';
+            }
+        });
+    }
+</script>
+
+
 {% endblock %}

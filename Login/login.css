@@ -1,0 +1,81 @@
+*   {
+    font-family: Roboto;
+}
+
+.wrap   {
+    margin: 50px;
+}
+
+.logobox {
+    width: 193px;
+    height: 177.25px;
+    border-radius: 5px;
+    background-color: #E3E3E3;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login_form {
+    text-align: center;
+}
+
+.id  {
+    width: 345px;
+    height: 56px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: rgba(144, 152, 177, 0.2);
+    margin-top: 82px;
+    
+    line-height: 55px;
+    text-indent: 10%;
+    color: black;
+    font-size: 16px;
+}
+
+.pwd {
+    width: 345px;
+    height: 56px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: rgba(144, 152, 177, 0.2);
+    margin-top: 40px;
+    
+    line-height: 55px;
+    text-indent: 10%;
+    color: black;
+    font-size: 16px;
+}
+
+.btn {
+    width: 345px;
+    height: 57px;
+    border-radius: 15px;
+    background-color: rgb(164, 198, 222);
+    margin-top: 51px;
+    padding: 10px 20px;
+    border: 0px;
+
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.log_under   {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a{ 
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color:black;
+    text-decoration: none;
+}
