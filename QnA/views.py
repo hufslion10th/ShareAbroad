@@ -1,7 +1,12 @@
+import datetime
+import json
 from django.shortcuts import render, redirect
 from .models import *
 from users.models import *
 from .forms import *
+import datetime
+from django.http import JsonResponse, HttpResponse
+from django.template.loader import render_to_string
 
 # 질문글 작성 view
 def create_question(request):
@@ -58,12 +63,35 @@ def create_answer(request, pk):
 def question_detail(request, pk):
     question = QuestionPost.objects.get(id=pk)
     answers = AnswerPost.objects.filter(question=question)
+    comments = QuestionComment.objects.filter(question=question)
 
     ctx = {
         "question": question,
         "answers": answers,
+        "comments": comments,
     }
     return render(request, template_name='QnA/detail.html', context=ctx)
+
+
+#질문에 대한 댓글 달기
+def create_comment_of_Q(request, pk):
+    question = QuestionPost.objects.get(id=pk)
+    content = request.GET.get('content')
+    now = datetime.datetime.now()
+    comment = QuestionComment(
+        question=question,
+        writer=User.objects.get(id=1),
+        content=content,
+        created_at=now
+    )
+    comment.save()
+    return JsonResponse(
+        {
+            "content": render_to_string(
+                '../templates/includes/comment_form.html', {"comment": comment}
+            )
+        }
+    )
 
 
 # 질문들 리스트 게시판 보는 view
