@@ -1,0 +1,75 @@
+.QnA-section {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+.QnA-section > .title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.QnA-section > .title-wrap > .title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.QnA-section > .title-wrap > .q-sorting {
+  display: flex;
+  color: grey;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.QnA-section > .title-wrap > .q-sorting > span {
+  margin-left: 0.5rem;
+}
+.QnA-section > .q-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 3rem 1rem 0;
+}
+.QnA-section > .q-wrap > .each-q {
+  box-sizing: border-box;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  background: #FFFFFF;
+  border: 1px solid cornflowerblue;
+  box-shadow: #dadada 0 4px 4px;
+  border-radius: 10px;
+}
+.QnA-section > .q-wrap > .each-q > a {
+  text-decoration: none;
+  color: black;
+}
+.QnA-section > .q-wrap > .each-q > a > .q-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: gray;
+}
+.QnA-section > .q-wrap > .each-q > a > .q-title-wrap > .q-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.QnA-section > .q-wrap > .each-q > a > .q-title-wrap > [class*=q-picked] {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.QnA-section > .q-wrap > .each-q > a > .q-content-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  height: 5rem;
+  background: gray;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.QnA-section > .q-wrap > .each-q > a > .q-content-wrap > div {
+  font-size: 0.8rem;
+}
+.QnA-section > .q-wrap > .each-q > a > .q-info-wrap {
+  margin: 0 auto 0 0;
+}
+.QnA-section > .q-wrap > .each-q > a > .q-info-wrap > div {
+  color: lightgray;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=list.css.map */
