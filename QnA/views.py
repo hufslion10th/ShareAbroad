@@ -100,5 +100,6 @@ def question_list(request):
 
     ctx = {
         "questions": questions,
+        "extra_sorting": ['답변을 기다리는 질문', '해결된 질문']
     }
     return render(request, template_name='QnA/list.html', context=ctx)

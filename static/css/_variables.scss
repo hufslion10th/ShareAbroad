@@ -1,0 +1,12 @@
+@mixin btn-basic {
+  min-width: 80px;
+  padding: 0.8rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  background: lightskyblue;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}

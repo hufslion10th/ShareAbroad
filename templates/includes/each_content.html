@@ -1,0 +1,18 @@
+<div class="each-q">
+    <a href="{% url 'QnA:QnA-detail' q.id %}">
+        <div class="q-title-wrap">
+            <div class="q-title">{{ q.title }}</div>
+            {% if q.picked_answer %}
+            <div class="q-picked-true">답변 채택 완료</div>
+            {% else %}
+            <div class="q-picked-false">답변 채택 전</div>
+            {% endif %}
+        </div>
+        <div class="q-content-wrap">
+            <div>{{ q.content }}</div>
+        </div>
+        <div class="q-info-wrap">
+            <div>개수 | 나라 | {{ q.created_at }}</div>
+        </div>
+    </a>
+</div>

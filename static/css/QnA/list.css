@@ -6,26 +6,70 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  margin: 2rem 0;
 }
 .QnA-section > .title-wrap > .title {
   font-size: 1.5rem;
   font-weight: 700;
 }
-.QnA-section > .title-wrap > .q-sorting {
+.QnA-section > .title-wrap > .btn-wrap {
   display: flex;
-  color: grey;
-  font-size: 0.8rem;
-  font-weight: 400;
 }
-.QnA-section > .title-wrap > .q-sorting > span {
+.QnA-section > .title-wrap > .btn-wrap > button {
   margin-left: 0.5rem;
+  min-width: 80px;
+  padding: 0.8rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  background: lightskyblue;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+.QnA-section .sub-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.QnA-section > .q-hot {
+  margin: 2rem 0;
+}
+.QnA-section > .q-hot > .hot-wrap {
+  display: flex;
+  padding: 0 1rem;
 }
 .QnA-section > .q-wrap {
   box-sizing: border-box;
   width: 100%;
-  padding: 3rem 1rem 0;
+  margin: 2rem 0;
 }
-.QnA-section > .q-wrap > .each-q {
+.QnA-section > .q-wrap > .sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+.QnA-section > .q-wrap > .sorting > select {
+  width: 15rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.QnA-section > .q-wrap > .sorting > .extra-sorting {
+  display: flex;
+}
+.QnA-section > .q-wrap > .sorting > .extra-sorting > div {
+  margin-left: 0.5rem;
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.QnA-section > .q-wrap > .q-list {
+  padding: 0 1rem;
+}
+.QnA-section > .q-wrap > .q-list > .each-q {
   box-sizing: border-box;
   padding: 1rem;
   margin-bottom: 3rem;
@@ -34,25 +78,25 @@
   box-shadow: #dadada 0 4px 4px;
   border-radius: 10px;
 }
-.QnA-section > .q-wrap > .each-q > a {
+.QnA-section > .q-wrap > .q-list > .each-q > a {
   text-decoration: none;
   color: black;
 }
-.QnA-section > .q-wrap > .each-q > a > .q-title-wrap {
+.QnA-section > .q-wrap > .q-list > .each-q > a > .q-title-wrap {
   display: flex;
   justify-content: space-between;
   margin-bottom: 1rem;
   color: gray;
 }
-.QnA-section > .q-wrap > .each-q > a > .q-title-wrap > .q-title {
+.QnA-section > .q-wrap > .q-list > .each-q > a > .q-title-wrap > .q-title {
   font-size: 1rem;
   font-weight: 700;
 }
-.QnA-section > .q-wrap > .each-q > a > .q-title-wrap > [class*=q-picked] {
+.QnA-section > .q-wrap > .q-list > .each-q > a > .q-title-wrap > [class*=q-picked] {
   font-size: 0.8rem;
   font-weight: 400;
 }
-.QnA-section > .q-wrap > .each-q > a > .q-content-wrap {
+.QnA-section > .q-wrap > .q-list > .each-q > a > .q-content-wrap {
   box-sizing: border-box;
   width: 100%;
   height: 5rem;
@@ -60,13 +104,13 @@
   margin-bottom: 1rem;
   padding: 0.5rem;
 }
-.QnA-section > .q-wrap > .each-q > a > .q-content-wrap > div {
+.QnA-section > .q-wrap > .q-list > .each-q > a > .q-content-wrap > div {
   font-size: 0.8rem;
 }
-.QnA-section > .q-wrap > .each-q > a > .q-info-wrap {
+.QnA-section > .q-wrap > .q-list > .each-q > a > .q-info-wrap {
   margin: 0 auto 0 0;
 }
-.QnA-section > .q-wrap > .each-q > a > .q-info-wrap > div {
+.QnA-section > .q-wrap > .q-list > .each-q > a > .q-info-wrap > div {
   color: lightgray;
   font-size: 0.8rem;
   font-weight: 400;
