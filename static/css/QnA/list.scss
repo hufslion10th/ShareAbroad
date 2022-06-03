@@ -1,3 +1,5 @@
+@use '../variables' as var;
+
 .QnA-section {
   box-sizing: border-box;
   padding: 1rem;
@@ -15,6 +17,7 @@
       display: flex;
       > button {
         margin-left: 0.5rem;
+        @include var.btn-basic;
       }
     }
   }
