@@ -8,7 +8,7 @@
   align-items: flex-end;
   margin: 2rem 0;
 }
-.QnA-section > .title-wrap > .title {
+.QnA-section > .title-wrap > .main-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -70,9 +70,9 @@
   padding: 0 1rem;
 }
 .QnA-section > .q-wrap > .q-list > .each-q {
+  margin-bottom: 3rem;
   box-sizing: border-box;
   padding: 1rem;
-  margin-bottom: 3rem;
   background: #FFFFFF;
   border: 1px solid cornflowerblue;
   box-shadow: #dadada 0 4px 4px;

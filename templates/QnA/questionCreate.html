@@ -1,11 +1,46 @@
 {% extends 'layout.html' %}
+<head>
+    {% block extraheads %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/QnA/questionCreate.css' %}">
+    {% endblock %}
+</head>
 
 {% block content %}
-<h1>Q create</h1>
-<form action="" method="post">
-    {% csrf_token %}
-    {{ question_form.as_p }}
-    <input type="submit" value="Submit">
-</form>
+<div class="q-create-page">
+    <div class="main-title">질문 작성하기</div>
+    <div class="q-form">
+        <form action="" method="post">
+            {% csrf_token %}
+                <div class="title-wrap">
+                    <input type="text" class="title">
+                </div>
+                <div class="select-option">
+                    <select class="country">
+                        <option>국가</option>
+                    </select>
+                    <select class="kind">
+                        <option>유형</option>
+                    </select>
+                </div>
+                <div class="content-wrap">
+                    <input type="text" class="q-content">
+                    <div>0자 / 최소 50자 이상</div>
+                </div>
+                <div class="q-photo-wrap">
+                    <div>사진 첨부하기</div>
+                    <div class="plus-photo">
+                        <div>+</div>
+                        <div>네모</div>
+                    </div>
+                </div>
+                <div class="q-tag-wrap">
+                    <div># 태그를 달아보세요</div>
+                    <div class="tags"></div>
+                </div>
+                <input type="submit" value="Submit" class="submit-btn">
+        </form>
+    </div>
+</div>
 
 {% endblock %}

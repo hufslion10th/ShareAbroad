@@ -1,0 +1,66 @@
+.q-create-page {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.q-form {
+  box-sizing: border-box;
+  padding: 1rem;
+  background: #FFFFFF;
+  border: 1px solid cornflowerblue;
+  box-shadow: #dadada 0 4px 4px;
+  border-radius: 10px;
+}
+.q-form > form > .title-wrap {
+  margin-bottom: 2rem;
+}
+.q-form > form > .title-wrap > .title {
+  padding: 0.5rem;
+}
+.q-form > form > .select-option {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.q-form > form > .select-option > select {
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.q-form > form > .content-wrap {
+  margin-bottom: 2rem;
+}
+.q-form > form > .content-wrap > input {
+  padding: 0.5rem;
+}
+.q-form > form > .q-photo-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.q-form > form > .q-photo-wrap > .plus-photo {
+  display: flex;
+}
+.q-form > form > .q-tag-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.q-form > form > .submit-btn {
+  min-width: 80px;
+  padding: 0.8rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: none;
+  background: lightskyblue;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=questionCreate.css.map */
