@@ -22,9 +22,7 @@
   }
 
   .sub-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    @include var.sub-title();
   }
 
   > .q-hot {

@@ -13,8 +13,9 @@
         <form action="" method="post">
             {% csrf_token %}
                 <div class="title-wrap">
-                    <input type="text" class="title">
+                    <input type="text" class="title" placeholder="제목을 입력해주세요.">
                 </div>
+
                 <div class="select-option">
                     <select class="country">
                         <option>국가</option>
@@ -23,22 +24,28 @@
                         <option>유형</option>
                     </select>
                 </div>
+
                 <div class="content-wrap">
                     <input type="text" class="q-content">
-                    <div>0자 / 최소 50자 이상</div>
+                    <span>0자 / 최소 50자 이상</span>
                 </div>
+
                 <div class="q-photo-wrap">
-                    <div>사진 첨부하기</div>
+                    <div class="sub-title">사진 첨부하기</div>
                     <div class="plus-photo">
                         <div>+</div>
-                        <div>네모</div>
+                        <div></div>
                     </div>
                 </div>
+
                 <div class="q-tag-wrap">
-                    <div># 태그를 달아보세요</div>
+                    <div class="sub-title"># 태그를 달아보세요</div>
                     <div class="tags"></div>
                 </div>
-                <input type="submit" value="Submit" class="submit-btn">
+
+                <div class="btn-wrap">
+                    <input type="submit" value="작성하기" class="submit-btn">
+                </div>
         </form>
     </div>
 </div>
