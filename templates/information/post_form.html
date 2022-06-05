@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateUpdate</title>
+</head>
+<body style="display: block; text-align:center">
+    <h2>게시글 작성</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="title">
+            <p>{{form.title.label}}</p>
+            {{form.title}}
+        </div>
+        <div class="content">xq
+            <p>{{form.content.label}}</p>
+            {{form.content}}
+        </div>
+        <button type="submit">보내기</button>
+    </form>
+</body>
+</html>

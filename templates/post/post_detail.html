@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+</head>
+<body style="display: block; text-align:center;">
+    <h1>게시글 상세보기</h1>
+    <div class="Post">
+        <h2>{{post.title}}</h2>
+        <p>{{post.content}}</p>
+        <p>작성일 : {{post.dt_created}}</p>
+        <p>수정일 : {{post.dt_updated}}</p>
+        <a href="{% url 'post-update' post.id %}">수정하기</a>
+        <a href="{% url 'post-delete' post.id %}">삭제하기</a>
+    </div>
+</body>
+</html>

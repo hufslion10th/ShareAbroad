@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'information',
     'QnA',
     'review',
+    'post',
 ]
 
 MIDDLEWARE = [

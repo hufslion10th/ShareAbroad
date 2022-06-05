@@ -9,4 +9,5 @@ urlpatterns = [
     path('information/', include('information.urls', namespace="information")),
     path('review/', include('review.urls', namespace="review")),
     path('', views.home), #민혁추가
+    path('post/', include('post.urls')), # 민혁추가2 (test용)
 ]

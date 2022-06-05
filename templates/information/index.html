@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        .Post{
+            border: solid 2px grey;
+        }
+    </style>
+</head>
+<body style="display: block; text-align:center;">
+    <h1>게시글 목록</h1>
+    <a href="{% url 'post-create' %}">글쓰기</a>
+    {% for post in posts %}
+        <div class="Post">
+            <h2>{{post.title}}</h2>
+            <p>{{post.dt_created}}</p>
+            <p>{{post.dt_updated}}</p>
+            <a href="{% url 'post-detail' post.id %}">상세보기</a>
+        </div>
+    {% endfor %}
+</body>
+</html>

@@ -54,3 +54,13 @@ def review_list(request):
     }
     return render(request, template_name='review/list.html', context=ctx)
 
+
+# 리뷰글 삭제 view (민혁 추가)
+'''def review_delete(request):
+    reviews = ReviewPost.objects.all()
+
+    ctx = {
+        "reviews": reviews,
+    }
+    return render(request, template_name='review/list.html', context=ctx)'''
+
