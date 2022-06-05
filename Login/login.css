@@ -1,14 +1,15 @@
-*   {
-    font-family: Roboto;
+body   {
+    font-family: 'Roboto', sans-serif;
 }
 
 .wrap   {
-    margin: 50px;
+    margin-top:50px;
+
 }
 
 .logobox {
-    width: 193px;
-    height: 177.25px;
+    width: 173px;
+    height: 157.25px;
     border-radius: 5px;
     background-color: #E3E3E3;
     margin-left: auto;
@@ -25,7 +26,7 @@
     border-radius: 20px;
     border: 0px;
     background-color: rgba(144, 152, 177, 0.2);
-    margin-top: 82px;
+    margin-top: 70px;
     
     line-height: 55px;
     text-indent: 10%;
@@ -60,7 +61,8 @@
     font-size: 20px;
 }
 
-.log_under   {
+
+.log_plus {
     display: flex;
     justify-content: center;
     text-align: center;
