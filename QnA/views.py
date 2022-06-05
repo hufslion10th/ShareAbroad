@@ -32,6 +32,37 @@ def create_question(request):
     return render(request, template_name='QnA/questionCreate.html', context=ctx)
 
 
+# 수정하기 with 희관님
+def edit_question(request, pk):
+    question = QuestionPost.objects.get(id=pk)
+    
+    if request.method == 'POST':
+        question.title = request.POST['title']
+        question.category = request.POST['category']
+        question.content = request.POST['content']
+
+        question.save()
+        return redirect('QnA:QnA-detail', question.pk)
+    
+    else:
+        question_form = CreateQuestionForm()
+
+        ctx = {
+            'question_form': question_form,
+        }
+
+        return render(request, template_name='QnA/questionCreate.html', context=ctx)
+
+# 삭제하기 with 희관님
+def delete_question(request, pk):
+    question = QuestionPost.objects.get(id=pk)
+
+    question.delete()
+    return redirect('QnA:QnA-list')
+      
+        
+
+
 def create_answer(request, pk):
     question = QuestionPost.objects.get(id=pk)
 

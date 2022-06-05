@@ -9,4 +9,6 @@
 <div>{{ question.created_at }}</div>
 
 <a href="{% url 'QnA:create-A' question.id %}">답변 달기</a>
+<a href="{% url 'QnA:edit-Q' question.id %}">수정하기</a>
+<a href="{% url 'QnA:delete-Q' question.id %}">삭제하기</a>
 {% endblock %}
