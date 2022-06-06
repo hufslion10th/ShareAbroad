@@ -1,0 +1,11 @@
+<div class="title-wrap">
+    <div class="main-title">{{ title }}</div>
+    <div class="btn-wrap">
+        <button>{{ btn1 }}</button>
+        {% if type == 'question' %}
+        <button onclick="go_page('{% url "QnA:create-Q" %}')">{{ btn2 }}</button>
+        {% else %}
+        <button onclick="go_page('{% url "QnA:create-Q" %}')">{{ btn2 }}</button>
+        {% endif %}
+    </div>
+</div>
