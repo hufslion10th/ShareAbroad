@@ -23,8 +23,15 @@ header {
 
 .navbar {
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 10px;
     text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0rem;
+    right: 0;
+    z-index: 4; 
+    background-color: white;
+    
   }
 
 
@@ -88,6 +95,7 @@ header {
     font-size: 22px;
     text-align: center;
 }
+
 
 
 .fa    {
