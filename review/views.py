@@ -80,6 +80,7 @@ def review_list(request):
 
     ctx = {
         "reviews": reviews,
+        "extra_sorting": ['최신 순', '조회 순', '공감 많은 순', '댓글 많은 순'],
     }
     return render(request, template_name='review/list.html', context=ctx)
 
