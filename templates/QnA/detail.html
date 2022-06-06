@@ -8,50 +8,7 @@
 
 {% block content %}
 <div class="q-detail-page">
-    <div class="main-title">질문 게시판</div>
-
-    <div class="question">
-        <div class="title-wrap">
-            <div class="title">{{ question.title }}</div>
-            <div class="other">
-                {% if picked_answer %}
-                <div class="pick-true">답변 채택 완료</div>
-                {% else %}
-                <div class="pick-false">답변 채택 전</div>
-                {% endif %}
-                <button>신고</button>
-            </div>
-        </div>
-
-        <div class="q-info">
-            <div class="user-info">
-                <div class="profile-photo"></div>
-                <div>
-                    <div class="id">{{ question.writer }} | {{ question.category }} </div>
-                    <div>{{ question.created_at }}</div>
-                </div>
-            </div>
-            <div class="responses">
-                <div class="like">
-                    <img>
-                    <div>좋아요 수</div>
-                </div>
-                <div class="comment">
-                    <img>
-                    <div>댓글 수</div>
-                </div>
-                <div class="watch">
-                    <img>
-                    <div>조회 수</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="q-content">
-            <div>{{ question.content }}</div>
-            <div>tags</div>
-        </div>
-    </div>
+    {% include 'includes/content_detail.html' with title='질문 게시판' type='question' %}
 
     <section class="answer">
         <a href="{% url 'QnA:create-A' question.id %}" class="answer-btn">답변 달기</a>
