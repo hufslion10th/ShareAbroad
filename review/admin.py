@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+@admin.register(ReviewPost)
+class ReviewPostAdmin(admin.ModelAdmin):
+    ordering = ['created_at']
+    search_fields = ['writer']
+    list_display = ['title', 'writer', 'content', 'category', 'like']
+    list_filter = ('writer',)
