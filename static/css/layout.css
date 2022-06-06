@@ -18,3 +18,57 @@ header {
     background-color: white;
     margin: 80px auto 0;
 }
+
+/*예은*/
+
+.logo_special   {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: -100px;
+}
+
+h1 {
+    justify-content: center;
+}
+
+form{
+    display: block;
+}
+
+.search_area .swindow   {
+    position: relative;
+    width: 661px;
+    height: 60px;
+    border: 2px solid rgb(164, 198, 222);
+    border-radius: 5px;
+}
+
+.form_control  {
+    position: relative;
+    width: 661px;
+    height: 60px;
+    border: 2px solid rgb(164, 198, 222);
+    border-radius: 5px;
+}
+
+.search_area .btn   {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 56px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.search_area .btn .icon_search_submit   {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-position: -420px 0;
+    background-repeat: no-repeat;
+    vertical-align: top;
+}
+
