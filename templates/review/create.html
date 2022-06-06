@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+<head>
+    {% block extraheads %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/QnA/questionCreate.css' %}">
+    {% endblock %}
+</head>
+
+{% block content %}
+    {% include 'includes/create_content.html' with type='후기' title='후기 작성하기' %}
+{% endblock %}
