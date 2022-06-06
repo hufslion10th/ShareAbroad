@@ -2,40 +2,62 @@
 {% load static %}
 
 {% block content %}
-<h1>Q detail</h1>
-<div>제목: {{ question.title }}</div>
-<div>카테고리 {{ question.category }}</div>
-<div>작성자: {{ question.writer }}</div>
-<div>내용: {{ question.content }}</div>
-<div>언제?{{ question.created_at }}</div>
-<div>-------------</div>
+<div class="q-detail-page">
+    <div class="main-title">질문 게시판</div>
 
-<section>
-    <h1>댓글</h1>
-    <div>
-        <input type="text" class="commentQ">
-        <button onclick="submitComment();">댓글 달기</button>
+    <div class="question">
+        <div class="title-wrap">
+            <div class="title">{{ question.title }}</div>
+            <div class="other">
+                {% if picked_answer %}
+                <div>답변 채택 완료</div>
+                {% else %}
+                <div>답변 채택 전</div>
+                {% endif %}
+                <button>신고</button>
+            </div>
+        </div>
+
+        <div class="q-info">
+            <div class="">
+
+            </div>
+        </div>
     </div>
-    <div class="q-comment-box">
-        {% if comments %}
-        {% for comment in comments %}
-            {% include 'includes/comment_form.html' %}
-        {% endfor %}
-        {% endif %}
-    </div>
-</section>
+    <div>카테고리 {{ question.category }}</div>
+    <div>작성자: {{ question.writer }}</div>
+    <div>내용: {{ question.content }}</div>
+    <div>언제?{{ question.created_at }}</div>
+    <div>-------------</div>
 
-<div>-------------</div>
+    <section>
+        <h1>댓글</h1>
+        <div>
+            <input type="text" class="commentQ">
+            <button onclick="submitComment();">댓글 달기</button>
+        </div>
+        <div class="q-comment-box">
+            {% if comments %}
+            {% for comment in comments %}
+                {% include 'includes/comment_form.html' %}
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
 
-<a href="{% url 'QnA:create-A' question.id %}">답변 달기</a>
+    <div>-------------</div>
 
-<div>-------------</div>
-<h1>답변들</h1>
-{% for answer in answers %}
-<div>작성자: {{ answer.writer }}</div>
-<div>내용: {{ answer.content }}</div>
-<div>언제? {{ answer.created_at }}</div>
-{% endfor %}
+    <a href="{% url 'QnA:create-A' question.id %}">답변 달기</a>
+
+    <div>-------------</div>
+    <h1>답변들</h1>
+    {% for answer in answers %}
+    <div>작성자: {{ answer.writer }}</div>
+    <div>내용: {{ answer.content }}</div>
+    <div>언제? {{ answer.created_at }}</div>
+    {% endfor %}
+
+</div>
 
 <script>
     const submitComment = () => {

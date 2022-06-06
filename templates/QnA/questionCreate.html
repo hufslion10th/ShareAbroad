@@ -13,20 +13,27 @@
         <form action="" method="post">
             {% csrf_token %}
                 <div class="title-wrap">
-                    <input type="text" class="title" placeholder="제목을 입력해주세요.">
+                    <label for="id_title"></label>
+                    <input type="text" name="title" maxlength="20" required=""
+                           id="id_title" class="title" placeholder="제목을 입력해주세요.">
                 </div>
 
                 <div class="select-option">
                     <select class="country">
                         <option>국가</option>
                     </select>
-                    <select class="kind">
-                        <option>유형</option>
+                    <label for="id_category"></label>
+                    <select name="category" required="" id="id_category" class="kind">
+                      <option value="" selected="">유형</option>
+                      <option value="학교">학교</option>
+                      <option value="생활">생활</option>
+                      <option value="자유">자유</option>
                     </select>
                 </div>
 
                 <div class="content-wrap">
-                    <input type="text" class="q-content">
+                    <label for="id_content"></label>
+                    <textarea name="content" cols="40" rows="10" required="" id="id_content" class="q-content"></textarea>
                     <span>0자 / 최소 50자 이상</span>
                 </div>
 
