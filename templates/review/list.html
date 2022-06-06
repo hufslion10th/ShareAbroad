@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+<head>
+    {% block extraheads %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/QnA/list.css' %}">
+    {% endblock %}
+</head>
+{% block content %}
+    <section class="QnA-section">
+        {% include 'includes/list_title.html' with title='후기 게시판' btn1='내 후기 관리' btn2='후기 작성하기' type='review' %}
+
+        <div class="q-wrap">
+            <div class="sub-title">💌 새로 올라온 후기</div>
+
+            {% include 'includes/sorting.html' with extra=extra_sorting %}
+
+            <div class="q-list">
+                {% for q in questions %}
+                    {% include 'includes/each_content.html' %}
+                {% endfor %}
+            </div>
+        </div>
+</section>
+{% endblock %}
