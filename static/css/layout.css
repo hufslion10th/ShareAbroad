@@ -1,5 +1,5 @@
 body {
-    background-color: #79aec8;
+    background-color: white;
     margin: 0;
 }
 
@@ -8,67 +8,104 @@ header {
     width: 100vw;
     height: 80px;
     top: 0;
+    background-color: white;
     margin: 0;
-    background-color: #5b80b2;
 }
 
 .main-body {
     max-width: 600px;
     min-height: 90vh;
     background-color: white;
-    margin: 80px auto 0;
+    margin: 20px auto 0;
 }
 
 /*예은*/
 
-.logo_special   {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: -100px;
+.navbar {
+    box-sizing: border-box;
+    padding: 1rem;
+    text-align: center;
+  }
+
+
+.swindow {
+    display: inline-flex;
 }
 
-h1 {
+.logo   {
+    width: 78px;
+    height: 78px;
+    margin-right: 25px;
+    margin-top: 19px;
+}
+
+.search_box {
+    width: 565px;
+    height: 60px;
+    border: 2px solid rgb(164, 198, 222);
+    border-radius: 5px;
+    display: flex;
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-right: 113px;
+}
+
+.search_box input   {
+    width: 450px;
+    height: 56px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline: none;
+
+    text-indent: 2%;
+    font-size: 18px;
+}
+
+.search_box button  {
+    width: 100px;
+    height: 56px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+
     justify-content: center;
+    display: flex;
+    
 }
 
-form{
-    display: block;
+.search_box i   {
+    color: lightgray;
+    font-size: 22px;
+    text-align: center;
 }
 
-.search_area .swindow   {
-    position: relative;
-    width: 661px;
-    height: 60px;
-    border: 2px solid rgb(164, 198, 222);
-    border-radius: 5px;
-}
-
-.form_control  {
-    position: relative;
-    width: 661px;
-    height: 60px;
-    border: 2px solid rgb(164, 198, 222);
-    border-radius: 5px;
-}
-
-.search_area .btn   {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 56px;
-    border: 0px;
-    cursor: pointer;
-}
-
-.search_area .btn .icon_search_submit   {
-    display: inline-block;
-    width: 22px;
-    height: 22px;
-    background-position: -420px 0;
-    background-repeat: no-repeat;
+/* .icon_search   {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
     vertical-align: top;
-}
+    background-color: #A4C6DE; 
+    color: black;
+    position: absolute;  
 
+    margin-top: 10px;
+
+} */
+
+.fa    {
+    font-size: 30px;
+    vertical-align: top;
+    position: absolute;  
+
+    margin-top: 5px;
+}
