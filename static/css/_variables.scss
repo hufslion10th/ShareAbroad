@@ -1,12 +1,60 @@
-@mixin btn-basic {
-  min-width: 80px;
-  padding: 0.8rem;
+$color-main-blue: #6f94c6;
+
+@mixin main-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@mixin sub-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@mixin box-basic {
+  box-sizing: border-box;
+  padding: 1rem;
+  background: #FFFFFF;
+  border: 1px solid cornflowerblue;
+  box-shadow: #dadada 0 4px 4px;
+  border-radius: 10px;
+}
+
+@mixin input-basic {
+  padding: 0.5rem;
+}
+
+@mixin select-basic {
+  @include input-basic();
+  cursor: pointer;
+}
+
+@mixin btn {
   box-sizing: border-box;
   border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+@mixin btn-basic {
+  @include btn();
+  min-width: 80px;
+  padding: 0.8rem;
   border: none;
   background: lightskyblue;
   font-size: 0.8rem;
   font-weight: 700;
   color: white;
-  cursor: pointer;
+}
+
+@mixin btn-sue {
+  @include btn();
+  max-height: 1.5rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid gray;
+  background: white;
+  font-size: 0.5rem;
+  font-weight: 400;
+  color: gray;
 }

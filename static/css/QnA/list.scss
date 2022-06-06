@@ -9,9 +9,8 @@
       align-items: flex-end;
       margin: 2rem 0;
 
-    > .title {
-      font-size: 1.5rem;
-      font-weight: 700;
+    > .main-title {
+      @include var.main-title;
     }
     > .btn-wrap {
       display: flex;
@@ -23,9 +22,7 @@
   }
 
   .sub-title {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+    @include var.sub-title();
   }
 
   > .q-hot {
@@ -50,8 +47,7 @@
 
       > select {
         width: 15rem;
-        padding: 0.5rem;
-        cursor: pointer;
+        @include var.select-basic();
       }
 
       > .extra-sorting {
@@ -69,13 +65,8 @@
       padding: 0 1rem;
 
       > .each-q {
-        box-sizing: border-box;
-        padding: 1rem;
         margin-bottom: 3rem;
-        background: #FFFFFF;
-        border: 1px solid cornflowerblue;
-        box-shadow: #dadada 0 4px 4px;
-        border-radius: 10px;
+        @include var.box-basic();
 
         > a {
           text-decoration: none;

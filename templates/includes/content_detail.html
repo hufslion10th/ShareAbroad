@@ -1,0 +1,46 @@
+<div class="main-title">{{ title }}</div>
+
+<div class="question">
+    <div class="title-wrap">
+        <div class="title">{{ content.title }}</div>
+        <div class="other">
+            {% if type == 'question' %}
+            {% if picked_answer %}
+            <div class="pick-true">답변 채택 완료</div>
+            {% else %}
+            <div class="pick-false">답변 채택 전</div>
+            {% endif %}
+            {% endif %}
+            <button>신고</button>
+        </div>
+    </div>
+
+    <div class="q-info">
+        <div class="user-info">
+            <div class="profile-photo"></div>
+            <div>
+                <div class="id">{{ content.writer }} | {{ content.category }} </div>
+                <div>{{ content.created_at }}</div>
+            </div>
+        </div>
+        <div class="responses">
+            <div class="like">
+                <img>
+                <div>좋아요 수</div>
+            </div>
+            <div class="comment">
+                <img>
+                <div>댓글 수</div>
+            </div>
+            <div class="watch">
+                <img>
+                <div>조회 수</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="q-content">
+        <div>{{ content.content }}</div>
+        <div>tags</div>
+    </div>
+</div>

@@ -8,7 +8,7 @@
   align-items: flex-end;
   margin: 2rem 0;
 }
-.QnA-section > .title-wrap > .title {
+.QnA-section > .title-wrap > .main-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -17,16 +17,18 @@
 }
 .QnA-section > .title-wrap > .btn-wrap > button {
   margin-left: 0.5rem;
-  min-width: 80px;
-  padding: 0.8rem;
   box-sizing: border-box;
   border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  min-width: 80px;
+  padding: 0.8rem;
   border: none;
   background: lightskyblue;
   font-size: 0.8rem;
   font-weight: 700;
   color: white;
-  cursor: pointer;
 }
 .QnA-section .sub-title {
   font-size: 1rem;
@@ -70,9 +72,9 @@
   padding: 0 1rem;
 }
 .QnA-section > .q-wrap > .q-list > .each-q {
+  margin-bottom: 3rem;
   box-sizing: border-box;
   padding: 1rem;
-  margin-bottom: 3rem;
   background: #FFFFFF;
   border: 1px solid cornflowerblue;
   box-shadow: #dadada 0 4px 4px;
