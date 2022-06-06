@@ -1,0 +1,120 @@
+@use '../variables' as var;
+
+.QnA-section {
+  box-sizing: border-box;
+  padding: 1rem;
+  > .title-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin: 2rem 0;
+
+    > .main-title {
+      @include var.main-title;
+    }
+    > .btn-wrap {
+      display: flex;
+      > button {
+        margin-left: 0.5rem;
+        @include var.btn-basic;
+      }
+    }
+  }
+
+  .sub-title {
+    @include var.sub-title();
+  }
+
+  > .q-hot {
+    margin: 2rem 0;
+    > .hot-wrap {
+      display: flex;
+      padding: 0 1rem;
+    }
+  }
+
+  > .q-wrap {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 2rem 0;
+
+    > .sorting {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+
+      > select {
+        width: 15rem;
+        @include var.select-basic();
+      }
+
+      > .extra-sorting {
+        display: flex;
+        > div {
+          margin-left: 0.5rem;
+          color: gray;
+          font-size: 0.8rem;
+          font-weight: 400;
+        }
+      }
+    }
+
+    > .q-list {
+      padding: 0 1rem;
+
+      > .each-q {
+        margin-bottom: 3rem;
+        @include var.box-basic();
+
+        > a {
+          text-decoration: none;
+          color: black;
+
+          > .q-title-wrap {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            color: gray;
+
+            > .q-title {
+              font-size: 1rem;
+              font-weight: 700;
+            }
+
+            > [class*='q-picked'] {
+              font-size: 0.8rem;
+              font-weight: 400;
+            }
+          }
+
+          > .q-content-wrap {
+            box-sizing: border-box;
+            width: 100%;
+            height: 5rem;
+            background: gray;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+
+            > div {
+              font-size: 0.8rem;
+            }
+
+          }
+
+          > .q-info-wrap {
+            margin: 0 auto 0 0;
+
+            > div {
+              color: lightgray;
+              font-size: 0.8rem;
+              font-weight: 400;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

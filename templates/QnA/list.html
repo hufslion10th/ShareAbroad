@@ -1,8 +1,42 @@
 {% extends 'layout.html' %}
+<head>
+    {% block extraheads %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/QnA/list.css' %}">
+    {% endblock %}
+</head>
 {% block content %}
-{% for q in questions %}
-<div>
-    <a href="{% url 'QnA:QnA-detail' q.id %}">{{ q }}</a>
-</div>
-{% endfor %}
+
+<section class="QnA-section">
+    <div class="title-wrap">
+        <div class="main-title">질문 게시판</div>
+        <div class="btn-wrap">
+            <button>내 질문 관리</button>
+            <button onclick="go_page('{% url "QnA:create-Q"  %}')">질문하기</button>
+        </div>
+    </div>
+
+    <div class="q-hot">
+        <div class="sub-title">🎢 많이 본 QnA</div>
+        <div class="hot-wrap">
+            <div class="arrow"><</div>
+            <div>
+                <div></div>
+            </div>
+            <div class="arrow"> ></div>
+        </div>
+    </div>
+
+    <div class="q-wrap">
+        <div class="sub-title">💌 새로 올라온 질문</div>
+
+        {% include 'includes/sorting.html' with extra=extra_sorting %}
+
+        <div class="q-list">
+            {% for q in questions %}
+                {% include 'includes/each_content.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
 {% endblock %}
