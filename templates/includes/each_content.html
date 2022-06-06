@@ -1,5 +1,9 @@
 <div class="each-q">
+    {% if type == 'review' %}
+    <a href="{% url 'review:review-detail' q.id %}">
+    {% else %}
     <a href="{% url 'QnA:QnA-detail' q.id %}">
+    {% endif %}
         <div class="q-title-wrap">
             <div class="q-title">{{ q.title }}</div>
             {% if q.picked_answer %}

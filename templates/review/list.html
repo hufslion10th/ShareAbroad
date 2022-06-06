@@ -34,7 +34,7 @@
 
         <div class="q-list">
             {% for q in reviews %}
-                {% include 'includes/each_content.html' %}
+                {% include 'includes/each_content.html' with type='review' %}
             {% endfor %}
         </div>
     </div>
