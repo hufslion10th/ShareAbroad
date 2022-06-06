@@ -2,7 +2,7 @@
 
 <div class="question">
     <div class="title-wrap">
-        <div class="title">{{ question.title }}</div>
+        <div class="title">{{ content.title }}</div>
         <div class="other">
             {% if type == 'question' %}
             {% if picked_answer %}
@@ -19,8 +19,8 @@
         <div class="user-info">
             <div class="profile-photo"></div>
             <div>
-                <div class="id">{{ question.writer }} | {{ question.category }} </div>
-                <div>{{ question.created_at }}</div>
+                <div class="id">{{ content.writer }} | {{ content.category }} </div>
+                <div>{{ content.created_at }}</div>
             </div>
         </div>
         <div class="responses">
@@ -40,7 +40,7 @@
     </div>
 
     <div class="q-content">
-        <div>{{ question.content }}</div>
+        <div>{{ content.content }}</div>
         <div>tags</div>
     </div>
 </div>

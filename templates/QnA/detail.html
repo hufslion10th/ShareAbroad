@@ -8,7 +8,7 @@
 
 {% block content %}
 <div class="q-detail-page">
-    {% include 'includes/content_detail.html' with title='질문 게시판' type='question' %}
+    {% include 'includes/content_detail.html' with title='질문 게시판' type='question' content=question %}
 
     <section class="answer">
         <a href="{% url 'QnA:create-A' question.id %}" class="answer-btn">답변 달기</a>
