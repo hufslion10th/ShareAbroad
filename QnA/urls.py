@@ -6,7 +6,6 @@ from django.conf.urls.static import static
 app_name = 'QnA'
 
 urlpatterns = [
-    path('', views.question_list, name='index'),#TODO 없애기
     path('create-Q', views.create_question, name='create-Q'),
     path('create-A/<int:pk>', views.create_answer, name='create-A'),
     path('create-Qcomment-ajax/<int:pk>', views.create_comment_of_Q, name='create_comment_of_Q'),
