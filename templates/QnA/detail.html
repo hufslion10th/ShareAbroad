@@ -8,66 +8,7 @@
 
 {% block content %}
 <div class="q-detail-page">
-    <div class="main-title">질문 게시판</div>
-
-    <div class="question">
-        <div class="title-wrap">
-            <div class="title">{{ question.title }}</div>
-            <div class="other">
-                {% if picked_answer %}
-                <div class="pick-true">답변 채택 완료</div>
-                {% else %}
-                <div class="pick-false">답변 채택 전</div>
-                {% endif %}
-                <button>신고</button>
-            </div>
-        </div>
-
-        <div class="q-info">
-            <div class="user-info">
-                <div class="profile-photo"></div>
-                <div>
-                    <div class="id">{{ question.writer }} | {{ question.category }} </div>
-                    <div>{{ question.created_at }}</div>
-                </div>
-            </div>
-            <div class="responses">
-                <div class="like">
-                    <img>
-                    <div>좋아요 수</div>
-                </div>
-                <div class="comment">
-                    <img>
-                    <div>댓글 수</div>
-                </div>
-                <div class="watch">
-                    <img>
-                    <div>조회 수</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="q-content">
-            <div>{{ question.content }}</div>
-            <div>tags</div>
-        </div>
-    </div>
-
-    <section class="q-comment">
-        <h1>댓글</h1>
-        <div>
-            <input type="text" class="commentQ">
-            <button onclick="submitComment();">댓글 달기</button>
-        </div>
-        <div class="q-comment-box">
-            {% if comments %}
-            {% for comment in comments %}
-                {% include 'includes/comment_form.html' %}
-            {% endfor %}
-            {% endif %}
-        </div>
-    </section>
-
+    {% include 'includes/content_detail.html' with title='질문 게시판' type='question' content=question %}
 
     <section class="answer">
         <a href="{% url 'QnA:create-A' question.id %}" class="answer-btn">답변 달기</a>
@@ -96,30 +37,5 @@
         </div>
     </section>
 </div>
-
-<script>
-    const submitComment = () => {
-        let target = event.target;
-        let content = document.querySelector('.commentQ').value;
-
-        let data = {
-            'content': content,
-        }
-
-         $.ajax({
-            type: 'GET',
-            dataType: 'JSON',
-            url: "{% url 'QnA:create_comment_of_Q' question.id %}",
-            data: data,
-            success: function (comment_data) {
-                let box = document.getElementsByClassName('q-comment-box')[0];
-                box.innerHTML += comment_data['content']
-                let input = document.querySelector('input.commentQ');
-                input.value = '';
-            }
-        });
-    }
-</script>
-
 
 {% endblock %}

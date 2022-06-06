@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+<head>
+    {% block extraheads %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/QnA/detail.css' %}">
+    {% endblock %}
+</head>
+
+{% block content %}
+<div class="q-detail-page">
+    {% include 'includes/content_detail.html' with title='후기 게시판' type='review' content=review %}
+</div>
+{% endblock %}

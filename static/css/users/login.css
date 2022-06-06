@@ -1,0 +1,84 @@
+body   {
+    font-family: 'Roboto', sans-serif;
+}
+
+.wrap   {
+    margin: 50px;
+
+}
+
+.logobox {
+    width: 173px;
+    height: 160px;
+    border-radius: 5px;
+    background-color: #E3E3E3;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login_form {
+    text-align: center;
+}
+
+.id  {
+    width: 305px;
+    height: 49px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: rgba(144, 152, 177, 0.2);
+    margin-top: 76px;
+    
+    line-height: 55px;
+    text-indent: 10%;
+    color: black;
+    font-size: 13px;
+}
+
+.pwd {
+    width: 305px;
+    height: 49px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: rgba(144, 152, 177, 0.2);
+    margin-top: 35px;
+    
+    line-height: 55px;
+    text-indent: 10%;
+    color: black;
+    font-size: 16px;
+}
+
+.btn {
+    width: 305px;
+    height: 50px;;
+    border-radius: 15px;
+    background-color:rgb(169, 213, 253);
+    margin-top: 44.5px;
+    border: 0px;
+
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.log_plus   {
+    margin-top: 7.6px;
+    float: center;
+    text-align: center;
+    overflow: auto;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+}
+
+a   {
+
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color:black;
+    text-decoration: none;
+}
