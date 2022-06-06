@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>Review Create</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ review_form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+
+{% endblock %}

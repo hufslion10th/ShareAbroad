@@ -42,7 +42,6 @@ INSTALLED_APPS = [
 
     'ShareAbroad',
     'users',
-    'information',
     'QnA',
     'review',
 ]
