@@ -7,54 +7,5 @@
 </head>
 
 {% block content %}
-<div class="q-create-page">
-    <div class="main-title">질문 작성하기</div>
-    <div class="q-form">
-        <form action="" method="post">
-            {% csrf_token %}
-                <div class="title-wrap">
-                    <label for="id_title"></label>
-                    <input type="text" name="title" maxlength="20" required=""
-                           id="id_title" class="title" placeholder="제목을 입력해주세요.">
-                </div>
-
-                <div class="select-option">
-                    <select class="country">
-                        <option>국가</option>
-                    </select>
-                    <label for="id_category"></label>
-                    <select name="category" required="" id="id_category" class="kind">
-                      <option value="" selected="">유형</option>
-                      <option value="학교">학교</option>
-                      <option value="생활">생활</option>
-                      <option value="자유">자유</option>
-                    </select>
-                </div>
-
-                <div class="content-wrap">
-                    <label for="id_content"></label>
-                    <textarea name="content" cols="40" rows="10" required="" id="id_content" class="q-content"></textarea>
-                    <span>0자 / 최소 50자 이상</span>
-                </div>
-
-                <div class="q-photo-wrap">
-                    <div class="sub-title">사진 첨부하기</div>
-                    <div class="plus-photo">
-                        <div>+</div>
-                        <div></div>
-                    </div>
-                </div>
-
-                <div class="q-tag-wrap">
-                    <div class="sub-title"># 태그를 달아보세요</div>
-                    <div class="tags"></div>
-                </div>
-
-                <div class="btn-wrap">
-                    <input type="submit" value="작성하기" class="submit-btn">
-                </div>
-        </form>
-    </div>
-</div>
-
+    {% include 'includes/create_content.html' with type='질문' title='질문 작성하기' %}
 {% endblock %}
