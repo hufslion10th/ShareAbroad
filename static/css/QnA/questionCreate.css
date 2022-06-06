@@ -1,0 +1,113 @@
+.q-create-page {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.q-form {
+  box-sizing: border-box;
+  padding: 1rem;
+  background: #FFFFFF;
+  border: 1px solid cornflowerblue;
+  box-shadow: #dadada 0 4px 4px;
+  border-radius: 10px;
+}
+.q-form > form {
+  box-sizing: border-box;
+}
+.q-form > form > .title-wrap {
+  margin-bottom: 2rem;
+}
+.q-form > form > .title-wrap > .title {
+  padding: 0.5rem;
+  width: 60%;
+}
+.q-form > form > .select-option {
+  display: flex;
+  margin-bottom: 2rem;
+}
+.q-form > form > .select-option > select {
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  width: 30%;
+}
+.q-form > form > .content-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.q-form > form > .content-wrap > input {
+  padding: 0.5rem;
+  width: -webkit-fill-available;
+  height: 10rem;
+  margin: 0 auto;
+}
+.q-form > form > .content-wrap > span {
+  margin-left: auto;
+  font-size: 0.5rem;
+  font-weight: 700;
+  color: gray;
+}
+.q-form > form .sub-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.q-form > form > .q-photo-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.q-form > form > .q-photo-wrap > .plus-photo {
+  display: flex;
+}
+.q-form > form > .q-photo-wrap > .plus-photo > div {
+  box-sizing: border-box;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5px;
+  background: gray;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+}
+.q-form > form > .q-tag-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.q-form > form > .q-tag-wrap > .tags {
+  box-sizing: border-box;
+  width: 100%;
+  height: 2rem;
+  border-radius: 5px;
+  background: gray;
+}
+.q-form > form > .btn-wrap {
+  display: flex;
+  align-items: center;
+}
+.q-form > form > .btn-wrap > .submit-btn {
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  min-width: 80px;
+  padding: 0.8rem;
+  border: none;
+  background: lightskyblue;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=questionCreate.css.map */

@@ -1,0 +1,11 @@
+> .q-sorting {
+  display: flex;
+  color: grey;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+> .q-sorting > span {
+  margin-left: 0.5rem;
+}
+
+/*# sourceMappingURL=myqna.css.map */

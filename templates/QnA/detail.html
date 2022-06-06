@@ -1,41 +1,101 @@
 {% extends 'layout.html' %}
-{% load static %}
+<head>
+    {% block extraheads %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/QnA/detail.css' %}">
+    {% endblock %}
+</head>
 
 {% block content %}
-<h1>Q detail</h1>
-<div>제목: {{ question.title }}</div>
-<div>카테고리 {{ question.category }}</div>
-<div>작성자: {{ question.writer }}</div>
-<div>내용: {{ question.content }}</div>
-<div>언제?{{ question.created_at }}</div>
-<div>-------------</div>
+<div class="q-detail-page">
+    <div class="main-title">질문 게시판</div>
 
-<section>
-    <h1>댓글</h1>
-    <div>
-        <input type="text" class="commentQ">
-        <button onclick="submitComment();">댓글 달기</button>
+    <div class="question">
+        <div class="title-wrap">
+            <div class="title">{{ question.title }}</div>
+            <div class="other">
+                {% if picked_answer %}
+                <div class="pick-true">답변 채택 완료</div>
+                {% else %}
+                <div class="pick-false">답변 채택 전</div>
+                {% endif %}
+                <button>신고</button>
+            </div>
+        </div>
+
+        <div class="q-info">
+            <div class="user-info">
+                <div class="profile-photo"></div>
+                <div>
+                    <div class="id">{{ question.writer }} | {{ question.category }} </div>
+                    <div>{{ question.created_at }}</div>
+                </div>
+            </div>
+            <div class="responses">
+                <div class="like">
+                    <img>
+                    <div>좋아요 수</div>
+                </div>
+                <div class="comment">
+                    <img>
+                    <div>댓글 수</div>
+                </div>
+                <div class="watch">
+                    <img>
+                    <div>조회 수</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="q-content">
+            <div>{{ question.content }}</div>
+            <div>tags</div>
+        </div>
     </div>
-    <div class="q-comment-box">
-        {% if comments %}
-        {% for comment in comments %}
-            {% include 'includes/comment_form.html' %}
-        {% endfor %}
-        {% endif %}
-    </div>
-</section>
 
-<div>-------------</div>
+    <section class="q-comment">
+        <h1>댓글</h1>
+        <div>
+            <input type="text" class="commentQ">
+            <button onclick="submitComment();">댓글 달기</button>
+        </div>
+        <div class="q-comment-box">
+            {% if comments %}
+            {% for comment in comments %}
+                {% include 'includes/comment_form.html' %}
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
 
-<a href="{% url 'QnA:create-A' question.id %}">답변 달기</a>
 
-<div>-------------</div>
-<h1>답변들</h1>
-{% for answer in answers %}
-<div>작성자: {{ answer.writer }}</div>
-<div>내용: {{ answer.content }}</div>
-<div>언제? {{ answer.created_at }}</div>
-{% endfor %}
+    <section class="answer">
+        <a href="{% url 'QnA:create-A' question.id %}" class="answer-btn">답변 달기</a>
+
+        <div class="each-a">
+            {% for answer in answers %}
+            <hr>
+            <div class="content-wrap">
+                <div class="content-box">
+                    <div class="content">{{ answer.content }}</div>
+                    <div class="other">
+                        <div class="like">
+                            <img>
+                            <div>좋아요 수</div>
+                        </div>
+                        <button class="pick-btn">답변 채택</button>
+                    </div>
+                </div>
+                <div class="other">
+                    <button>신고</button>
+                    <div></div>
+                </div>
+            </div>
+            {% endfor %}
+            <hr>
+        </div>
+    </section>
+</div>
 
 <script>
     const submitComment = () => {
