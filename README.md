@@ -21,8 +21,8 @@
 
 | 김강민🐶    | 김예은🐥    | 손민혁🦊️ | 임예람🐰                   | 정지원🐻‍❄    |
 |----------|----------|----------|-------------------------|----------|
-| ---      | ---      | ---      | ---                     | -----    |
-| 기획 & 디자인 | FrontEnd | BackEnd  | BackEnd <br/>& FrontEnd | 기획 & 디자인 |
+| 강민 photo     | 예은 photo      | 민혁 photo      | <img src="https://user-images.githubusercontent.com/77733145/172363662-7a03f0ab-8993-4d42-9a92-fd20cc4b30b3.jpeg" width="150" >           | 지원 photo    |
+| 기획 & 디자인 | FrontEnd | BackEnd  | BackEnd & FrontEnd | 기획 & 디자인 |
 
 ### 🛠 Tech Stack & Tool
 * BackEnd: `Python` `Django`
