@@ -16,14 +16,15 @@ header {
     max-width: 600px;
     min-height: 90vh;
     background-color: white;
-    margin: 20px auto 0;
+    margin: 80px auto 0;
 }
 
 /*예은*/
 
 .navbar {
+    height: 80px;
     box-sizing: border-box;
-    padding: 10px;
+    /*padding: 10px;*/
     text-align: center;
     position: fixed;
     top: 0;
@@ -36,30 +37,36 @@ header {
 
 
 .swindow {
+    width: 600px;
     display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.swindow > a{
+    padding: 0.8rem;
 }
 
 .logo   {
-    width: 78px;
-    height: 78px;
-    margin-right: 25px;
-    margin-top: 19px;
+    width: 60px;
+    height: 60px;
+    /*margin-right: 25px;*/
+    /*margin-top: 19px;*/
 }
 
 .search_box {
-    width: 565px;
-    height: 60px;
+    width: 70%;
+    height: 40px;
     border: 2px solid rgb(164, 198, 222);
     border-radius: 5px;
     display: flex;
-    margin-top: 25px;
-    margin-left: 10px;
-    margin-right: 113px;
+    /*margin-top: 25px;*/
+    /*margin-left: 10px;*/
+    /*margin-right: 113px;*/
 }
 
 .search_box input   {
-    width: 450px;
-    height: 56px;
+    width: 100%;
+    /*height: 56px;*/
     padding-left: 12px;
     padding-right: 12px;
     border: none;
@@ -74,8 +81,8 @@ header {
 }
 
 .search_box button  {
-    width: 100px;
-    height: 56px;
+    width: 15%;
+    /*height: 56px;*/
     margin: 0;
     padding: 0;
     border: none;
@@ -96,12 +103,17 @@ header {
     text-align: center;
 }
 
+.search_box a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
 
-
-.fa    {
+.fa  {
     font-size: 30px;
-    vertical-align: top;
-    position: absolute;  
-
-    margin-top: 5px;
+    /*vertical-align: top;*/
+    /*position: absolute;*/
 }
