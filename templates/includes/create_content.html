@@ -3,6 +3,7 @@
     <div class="q-form">
         <form action="" method="post">
             {% csrf_token %}
+                {% if type != 'answer' %}
                 <div class="title-wrap">
                     <label for="id_title"></label>
                     <input type="text" name="title" maxlength="20" required=""
@@ -31,6 +32,7 @@
                     </select>
                     {% endif %}
                 </div>
+                {% endif %}
 
                 <div class="content-wrap">
                     <label for="id_content"></label>
@@ -38,6 +40,7 @@
                     <span>0자 / 최소 50자 이상</span>
                 </div>
 
+                {% if type != 'answer' %}
                 <div class="q-photo-wrap">
                     <div class="sub-title">사진 첨부하기</div>
                     <div class="plus-photo">
@@ -50,6 +53,7 @@
                     <div class="sub-title"># 태그를 달아보세요</div>
                     <div class="tags"></div>
                 </div>
+                {% endif %}
 
                 <div class="btn-wrap">
                     <input type="submit" value="작성하기" class="submit-btn">

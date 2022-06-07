@@ -1,11 +1,11 @@
 {% extends 'layout.html' %}
+<head>
+    {% block extraheads %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/QnA/questionCreate.css' %}">
+    {% endblock %}
+</head>
 
 {% block content %}
-<h1>{{ question }}에 대한 답변을 달아보자</h1>
-<form action="" method="post">
-    {% csrf_token %}
-    {{ answer_form.as_p }}
-    <input type="submit" value="Submit">
-</form>
-
+    {% include 'includes/create_content.html' with type='answer' title='답변 작성하기' %}
 {% endblock %}
