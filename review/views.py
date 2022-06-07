@@ -32,7 +32,7 @@ def create_review(request):
         'review_form': review_form,
     }
 
-    return render(request, template_name='review/reviewCreate.html', context=ctx)
+    return render(request, template_name='review/create.html', context=ctx)
 
 
 # 수정하기 

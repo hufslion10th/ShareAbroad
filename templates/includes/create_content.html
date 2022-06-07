@@ -21,6 +21,14 @@
                       <option value="생활">생활</option>
                       <option value="자유">자유</option>
                     </select>
+                    {% else %}
+                    <label for="id_category"></label>
+                    <select name="category" required="" id="id_category" class="kind">
+                      <option value="" selected="">유형</option>
+                      <option value="교환">교환</option>
+                      <option value="7+1">7+1</option>
+                      <option value="자유">자유</option>
+                    </select>
                     {% endif %}
                 </div>
 
