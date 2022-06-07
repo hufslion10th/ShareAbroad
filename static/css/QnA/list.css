@@ -102,9 +102,10 @@
   box-sizing: border-box;
   width: 100%;
   height: 5rem;
-  background: gray;
+  background: #b6b4b4;
   margin-bottom: 1rem;
   padding: 0.5rem;
+  border-radius: 5px;
 }
 .QnA-section > .q-wrap > .q-list > .each-q > a > .q-content-wrap > div {
   font-size: 0.8rem;
