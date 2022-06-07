@@ -8,6 +8,26 @@
   font-weight: 700;
   margin-bottom: 3rem;
 }
+.q-detail-page > .btn-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.q-detail-page > .btn-wrap > button {
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  min-width: 80px;
+  padding: 0.8rem;
+  border: none;
+  background: lightskyblue;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
 .q-detail-page > .question {
   box-sizing: border-box;
   padding: 1rem;

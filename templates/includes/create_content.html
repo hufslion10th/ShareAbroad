@@ -6,8 +6,13 @@
                 {% if type != 'answer' %}
                 <div class="title-wrap">
                     <label for="id_title"></label>
+                    {% if type == 'edit' %}
+                    <input type="text" name="title" value='{{ review_form.title.value }}' maxlength="20"
+                           required="" id="id_title" class="title">
+                    {% else %}
                     <input type="text" name="title" maxlength="20" required=""
                            id="id_title" class="title" placeholder="제목을 입력해주세요.">
+                    {% endif %}
                 </div>
 
                 <div class="select-option">
@@ -36,7 +41,11 @@
 
                 <div class="content-wrap">
                     <label for="id_content"></label>
-                    <textarea name="content" cols="40" rows="10" required="" id="id_content" class="q-content"></textarea>
+                    <textarea name="content" cols="40" rows="10" required="" id="id_content" class="q-content">
+                        {% if type == 'edit' %}
+                        {{ review_form.content.value }}
+                        {% endif %}
+                    </textarea>
                     <span>0자 / 최소 50자 이상</span>
                 </div>
 
@@ -56,7 +65,11 @@
                 {% endif %}
 
                 <div class="btn-wrap">
+                    {% if type == 'edit' %}
+                    <input type="submit" value="수정하기" class="submit-btn">
+                    {% else %}
                     <input type="submit" value="작성하기" class="submit-btn">
+                    {% endif %}
                 </div>
         </form>
     </div>

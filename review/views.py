@@ -48,13 +48,13 @@ def edit_review(request, pk):
         return redirect('review:review-detail', review.pk)
     
     else:
-        review_form = CreateReviewForm()
+        review_form = CreateReviewForm(instance=review)
 
         ctx = {
             'review_form': review_form,
         }
 
-        return render(request, template_name='review/reviewCreate.html', context=ctx)
+        return render(request, template_name='review/update.html', context=ctx)
 
 # 삭제하기
 def delete_review(request, pk):

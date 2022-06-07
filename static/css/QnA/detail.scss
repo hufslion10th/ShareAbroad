@@ -10,6 +10,16 @@
     margin-bottom: 3rem;
   }
 
+  > .btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    > button {
+      @include var.btn-basic();
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
   > .question {
     @include var.box-basic();
     margin-bottom: 3rem;

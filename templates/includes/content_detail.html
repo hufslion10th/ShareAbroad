@@ -1,5 +1,12 @@
 <div class="main-title">{{ title }}</div>
 
+{% if type == 'review' %}
+<div class="btn-wrap">
+    <button onclick="go_page('{% url "review:edit-R" content.id %}')">수정하기</button>
+    <button onclick="go_page('{% url "review:delete-R" content.id %}')">삭제하기</button>
+</div>
+{% endif %}
+
 <div class="question">
     <div class="title-wrap">
         <div class="title">{{ content.title }}</div>
