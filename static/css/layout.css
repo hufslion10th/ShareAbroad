@@ -8,8 +8,8 @@ header {
     width: 100vw;
     height: 80px;
     top: 0;
+    background-color: white;
     margin: 0;
-    background-color: #5b80b2;
 }
 
 .main-body {
@@ -17,4 +17,103 @@ header {
     min-height: 90vh;
     background-color: white;
     margin: 80px auto 0;
+}
+
+/*예은*/
+
+.navbar {
+    height: 80px;
+    box-sizing: border-box;
+    /*padding: 10px;*/
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0rem;
+    right: 0;
+    z-index: 4; 
+    background-color: white;
+    
+  }
+
+
+.swindow {
+    width: 600px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.swindow > a{
+    padding: 0.8rem;
+}
+
+.logo   {
+    width: 60px;
+    height: 60px;
+    /*margin-right: 25px;*/
+    /*margin-top: 19px;*/
+}
+
+.search_box {
+    width: 70%;
+    height: 40px;
+    border: 2px solid rgb(164, 198, 222);
+    border-radius: 5px;
+    display: flex;
+    /*margin-top: 25px;*/
+    /*margin-left: 10px;*/
+    /*margin-right: 113px;*/
+}
+
+.search_box input   {
+    width: 100%;
+    /*height: 56px;*/
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    outline: none;
+
+    text-indent: 2%;
+    font-size: 18px;
+}
+
+.search_box button  {
+    width: 15%;
+    /*height: 56px;*/
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: white;
+
+    justify-content: center;
+    display: flex;
+    
+}
+
+.search_box i   {
+    color: lightgray;
+    font-size: 22px;
+    text-align: center;
+}
+
+.search_box a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.fa  {
+    font-size: 30px;
+    /*vertical-align: top;*/
+    /*position: absolute;*/
 }

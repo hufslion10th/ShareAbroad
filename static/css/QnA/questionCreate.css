@@ -5,15 +5,15 @@
 
 .main-title {
   font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
+  font-weight: 750;
+  margin-bottom: 3rem; 
 }
 
 .q-form {
   box-sizing: border-box;
   padding: 1rem;
   background: #FFFFFF;
-  border: 1px solid cornflowerblue;
+  border: 1px solid rgb(144, 152, 177);
   box-shadow: #dadada 0 4px 4px;
   border-radius: 10px;
 }

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/layout.css' %}">
     {% block extraheads %}
@@ -14,41 +15,21 @@
     <title>ShareAbroad</title>
 </head>
 <body>
-    <!-- <nav class="navbar navbar-expand-md navbar-light fixed-top">
-        <a href="#" class="navbar-brand"><img src="https://w.namu.la/s/b101794e51d827ae6ddb058b1f08c92f4f8bbe65aa2857ecea6f6374f900f7c4f7b03a85665396506ea14b8c7dc0eb0dfadf3f7bb164209dc56acbea239663efd0acf3a814683eff77b3355691fe4ae7" width="78", height="73"></a>
-        
-        <search form>
-        <form class="form-inline">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search">
-                <div class="input-group-append">
-                    <button type="button" class="btn"><i class="fas fa-search text-muted"></i></button>
-                </div>
-    
+    <nav class="navbar navbar-expand-sm bg-light navbar-fixed-top">
+        <div class="swindow">
+            <a href="#메인">
+                <img src="https://w.namu.la/s/b101794e51d827ae6ddb058b1f08c92f4f8bbe65aa2857ecea6f6374f900f7c4f7b03a85665396506ea14b8c7dc0eb0dfadf3f7bb164209dc56acbea239663efd0acf3a814683eff77b3355691fe4ae7" class="logo">
+            </a>
+            <div class="search_box">
+                <input type="text" maxlength="225" placeholder="통합 검색">
+                <button>
+                    <a href="/" class="btn btn-lg btn-primary btn-block">
+                        <i class="fa fa-search" aria-hidden="true" style="color: #A4C6DE;"></i>
+                    </a>
+                </button>
             </div>
-        </form>
-    
-    </nav> -->
-
-    <div class="logo_area">
-        <h1 class="logo_special">
-            <a href="layout.html" class="brand"><image src="https://w.namu.la/s/b101794e51d827ae6ddb058b1f08c92f4f8bbe65aa2857ecea6f6374f900f7c4f7b03a85665396506ea14b8c7dc0eb0dfadf3f7bb164209dc56acbea239663efd0acf3a814683eff77b3355691fe4ae7" width="78", height="73" class="special_img" alt="HUFS_LOGO"></a>
-        </h1>
-    </div>
-
-    <div id="search" class="search_area">
-        <form id="sform" name="sform" method="get" role="search">
-            <div class="swindow" style="border-color:#A4C6DE;">
-                <input type="text" class="form-control" placeholder="통합 검색">
-            </div>
-            <div>
-            <button id="search_btn" type="submit" title="검색" tabindex="3" class="btn"></button>
-                <span class="icon_search_submit"></span>
-            </div>
-        </form>
-
-    </div>
-
+        </div>
+    </nav>
 
 
     <main class="main-body">
