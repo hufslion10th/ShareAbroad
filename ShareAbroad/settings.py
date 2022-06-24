@@ -10,18 +10,46 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+
+import string, random
 from pathlib import Path
-import os
+import os, json
+from django.core.exceptions import ImproperlyConfigured
+
+# BASE_DIR = Path(__file__).resolve().parent.parent
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+secret_file = os.path.join(BASE_DIR, 'secrets.json')  # secrets.json 파일 위치를 명시
+
+with open(secret_file) as f:
+    secrets = json.loads(f.read())
+
+def get_secret(setting):
+    """비밀 변수를 가져오거나 명시적 예외를 반환한다."""
+    try:
+        return secrets[setting]
+    except KeyError:
+        error_msg = "Set the {} environment variable".format(setting)
+        raise ImproperlyConfigured(error_msg)
+
+
+SECRET_KEY = get_secret("SECRET_KEY")
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-5^%-w0ss8mvw#d61o9i=o7gi=fd9dj9y!3_kcxw)0xi_t8k3&1'
+# SECRET_KEY = 'django-insecure-5^%-w0ss8mvw#d61o9i=o7gi=fd9dj9y!3_kcxw)0xi_t8k3&1'
+
+# Get ascii Characters numbers and punctuation (minus quote characters as they could terminate string).
+# chars = ''.join([string.ascii_letters, string.digits, string.punctuation]).replace('\'', '').replace('"', '').replace('\\', '')
+#
+# SECRET_KEY = ''.join([random.SystemRandom().choice(chars) for i in range(50)])
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
